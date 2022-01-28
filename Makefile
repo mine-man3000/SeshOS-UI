@@ -21,6 +21,7 @@ objects = 	obj/loader.o \
 			obj/gui/desktop.o \
 			obj/gui/taskbar.o \
 			obj/gui/render.o \
+			obj/gui/button.o \
 			obj/kernel.o
 
 #to create .o file from .cpp file
@@ -81,8 +82,7 @@ mykernel.iso: mykernel.bin
 # start instance of virtualbox running this OS
 # not yet working
 run: mykernel.iso
-	qemu-system-i386 mykernel.iso -m 1G
-
+	qemu-system-x86_64 -cdrom mykernel.iso
 
 .PHONY: clean
 # deletes generated object files and mykernel.bin

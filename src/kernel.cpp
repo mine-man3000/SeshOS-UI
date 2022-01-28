@@ -10,6 +10,7 @@
 #include <gui/desktop.h>
 #include <gui/taskbar.h>
 #include <gui/window.h>
+#include <gui/button.h>
 #include <gui/render.h>
 #include <multitasking.h>
 
@@ -251,7 +252,7 @@ extern "C" void kernelMain(void* multiboot_structure, uint32_t magicnumber){
         Window win2(&desktop, 40,15, 30,30, 0x00,0xA8,0x00);
         desktop.AddChild(&win2);
                     //parent,X,Y,W,H,R,G,B
-        Taskbar StartButton(&desktop, 2,182,16,16, 0x90,0x90,0x90);
+        Button StartButton(&desktop, 2,182,16,16, 0x90,0x90,0x90);
         desktop.AddChild(&StartButton);
 
         Taskbar taskbar(&desktop, 0,180,320,20, 0x80,0x80,0x80);
